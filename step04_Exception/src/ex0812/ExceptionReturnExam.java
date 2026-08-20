@@ -1,0 +1,24 @@
+package ex0812;
+
+public class ExceptionReturnExam {
+	
+	public void aa(int i) {
+		try {
+		if(i==0) {
+			//return;//메소드 빠져나가라.
+			System.exit(0);//프로그램 강제종료 , exit일때는 finally가 실행되지않는다.
+		}
+		System.out.println(i+"입니다.");
+		}finally {
+		System.out.println("--aa 끝 ---");
+		}
+	}
+	public static void main(String[] args) {
+		System.out.println("***메인 시작***");
+		
+		//new ExceptionReturnExam().aa(10);
+		new ExceptionReturnExam().aa(0);
+		
+		System.out.println("***메인 끝***");
+	}
+}
