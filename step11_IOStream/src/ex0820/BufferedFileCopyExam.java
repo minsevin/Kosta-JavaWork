@@ -12,7 +12,7 @@ public class BufferedFileCopyExam {
 		BufferedInputStream bis = null;
 		BufferedOutputStream bos = null;
 		try {
-			bis = new BufferedInputStream (new FileInputStream(readFileName));
+			bis = new BufferedInputStream (new FileInputStream(readFileName));//FileCopyExam과 살짝 다르다. 다형성을 사용하여 코드를 줄인것.
 			bos = new BufferedOutputStream (new FileOutputStream(writeFileName));
 			
 			while(true) {
