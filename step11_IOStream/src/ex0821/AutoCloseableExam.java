@@ -1,5 +1,23 @@
 package ex0821;
 
-public class AutoCloseableExam {
+class Test implements AutoClsoseable{
+	
+	@Override
+	public void close() throws Exception{
+		System.out.println("close 호출됨");
+	}
+	
+}
 
+public class AutoCloseableExam {
+	public static void main(String[] args) {
+		System.out.println("-----시작하기-----");
+		try(Test t = new Test();){
+			System.out.println(t);
+			System.out.println("즐거운 금요일");
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		System.out.println("-----끝-----");
+	}
 }
