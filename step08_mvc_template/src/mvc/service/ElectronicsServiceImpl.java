@@ -29,7 +29,7 @@ public class ElectronicsServiceImpl implements ElectronicsService {
     private ElectronicsServiceImpl() {
     	System.out.println("**private constructor init.....");
     	ResourceBundle rb = ResourceBundle.getBundle("InitInfo");//InitInfo.properties
-        for(String key : rb.keySet()) {
+        for(String key : rb.keySet()) {//
      	  String value =  rb.getString(key); //100,\uC120\uD48D\uAE30,35000,\uC0BC\uC131 \uC120\uD48D\uAE30
      	   String data[] = value.split(",");
      	   System.out.println(key +" = " + value);
@@ -61,8 +61,14 @@ public class ElectronicsServiceImpl implements ElectronicsService {
 
 	@Override
 	public Electronics searchByModelNo(int modelNo) throws SearchNotFoundException {
-		// TODO Auto-generated method stub
-		return null;
+		for(Electronics e : list) {
+			if(e.getModelNo() == modelNo) {
+				return e;
+			}
+		}
+		
+		throw new SearchNotFoundException(modelNo+"에 해당하는 정보가 없습니다.");
+
 	}
 
 	@Override
