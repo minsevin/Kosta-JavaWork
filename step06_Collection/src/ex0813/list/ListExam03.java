@@ -61,8 +61,7 @@ public class ListExam03 extends ArrayList<Emp>{
     	return findList;
     }
      
-    /**
-     * 사원번호를 기준으로 사원정보 정렬하기
+    /*** 사원번호를 기준으로 사원정보 정렬하기
      * */
     public List<Emp> sortByEmpno(){
     	
@@ -162,21 +161,3 @@ public class ListExam03 extends ArrayList<Emp>{
 	}
 	 
  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
