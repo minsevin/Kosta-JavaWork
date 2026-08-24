@@ -1,6 +1,6 @@
 package ex0807.sample02;
 
-public  class Employee {//
+public abstract class Employee {//
 	private int empNo;
 	private String empName;
 	private String job;
@@ -73,9 +73,7 @@ public  class Employee {//
 		return builder.toString();
 	}
 	
-	public  void message() {
-		
-	}
+	public abstract void message() ;
 	
 }
 

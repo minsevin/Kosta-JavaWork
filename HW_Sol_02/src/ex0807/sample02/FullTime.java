@@ -1,6 +1,6 @@
 package ex0807.sample02;
 
-public class FullTime extends Employee {
+public  /*abstract*/ class FullTime extends Employee {
 	private int salary;
 	private int bonus;
 	
@@ -40,11 +40,11 @@ public class FullTime extends Employee {
 	}
 	
 	
-	
 	@Override
 	public void message() {
 		System.out.println(super.getEmpName()+"사원은 정규직입니다.");
 	}
+	
 	
 }
 

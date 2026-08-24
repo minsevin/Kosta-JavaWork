@@ -7,11 +7,13 @@ public class MainApp {
 		Car car = carAgency.rent();
 		car.run();
 		
-		System.out.println("---------------------------");
-
-		Rentable<Home> homeAgency = new HomeAgency();
+		System.out.println("----------");
+		
+		Rentable<Home>  homeAgency= new HomeAgency();
 		Home home = homeAgency.rent();
 		home.room();
+		
+
 	}
 
 }
